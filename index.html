@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Neighborhood Map</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="device=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        </script>
+        <script src='http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js'>
+        </script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/1.2.1/knockout-min.js">
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLpjFc9MfL7fnwqhX84HmQsefnPBz-c_0&callback=myMap&libraries=places" onerror="error()">
+        </script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- this block contains all locations and filter locations -->
+        <div id="markerList">
+            <input placeholder="Search about location…" type="search" name="q" data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off">
+            <div class="content">
+                <ul data-bind="template: {name:'locations', foreach:locations}">
+                </ul>
+            </div>
+
+            <script data-proofer-ignore type="text/html" id="locations" >
+                <li class="li" data-bind="attr:{id:title},text:title,click:whatClicked">
+                </li>
+            </script>
+        </div>
+
+        <!-- this block for display map -->
+        <div id="googleMap"></div>
+
+    </body>
+</html>
