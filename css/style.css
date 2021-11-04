@@ -1,0 +1,40 @@
+body, html {
+  height: 100%;
+  width: 100%;
+}
+#googleMap {
+    position: fixed;
+    width: 80%; height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    overflow: scroll;
+}
+#markerList{
+    position: fixed;
+    background-color: #CCEEFF;
+    width: 19%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    border: 4px solid #00FFFF;
+    overflow: scroll;
+}
+input{
+
+    width: 90%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-top: .5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.li{
+    width: 80%;
+    height: 20%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-top: 2%;
+    font-size: 20px;
+    font-weight: bold;
+}
